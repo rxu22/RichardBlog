@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Richard&#39;s Blog</title>
+  <meta name="author" content="Richard Xu">
+  
+  <meta name="description" content="Core Java Chapter 3
+3.1 Simple Java ProgramJava is case sensitive, so the system will not run if there are mistakes in capitalizationGiven the code:
+1">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Richard&#39;s Blog"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="shortcut icon" href="/RichardBlog/favicon.png">
+  
+  
+<link rel="stylesheet" href="/RichardBlog/css/style.css">
+
+  <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/RichardBlog/">Richard&#39;s Blog</a></h1>
+  <h2><a href="/RichardBlog/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/RichardBlog/null">Home</a></li>
+    
+      <li><a href="/RichardBlog/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article id="post-corejava1" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2021-06-08T02:26:54.742Z"><a href="/RichardBlog/2021/06/07/corejava1/">2021-06-07</a></time>
+      
+      
+  
+    <h1 class="p-name title" itemprop="headline name"></h1>
+  
+
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <h1 id="Core-Java-Chapter-3"><a href="#Core-Java-Chapter-3" class="headerlink" title="Core Java Chapter 3"></a>Core Java Chapter 3</h1><hr>
+<h3 id="3-1-Simple-Java-Program"><a href="#3-1-Simple-Java-Program" class="headerlink" title="3.1 Simple Java Program"></a>3.1 Simple Java Program</h3><p>Java is case sensitive, so the system will not run if there are mistakes in capitalization<br>Given the code:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class FirstSample</span><br><span class="line">&#123;</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(&quot;We will not use &#x27;Hello, World!&#x27;&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Main has to be “main”, or the program will not compile</li>
+<li>public is known as the <strong>access modifier</strong></li>
+<li>The access modifier sets the accessibility of classes</li>
+<li>class is a keyword. Everything in the java program is inside the class</li>
+<li>Naming a class: Must begin with a letter, and can be followed by any combination of letters/numbers</li>
+<li>Standard naming convention - class names are nouns that start with an uppercase letter. If a name consists of multiple words, use an initial uppercase letter in each of the words. (ex: FirstSample)</li>
+<li>Must make the file name the same as the name of the public class: FirstSample.java (capitalization matters)</li>
+<li>Launch the program with the command: java FirstSample</li>
+<li>When using java classname, it will always start the execution with the code in the main method. </li>
+<li>Must have a main method to execute</li>
+</ul>
+<p>The braces {} indicates the different blocks of the code.<br>Any method must be started with an opening brace and end with a closing brace.<br>All functions are methods of some class</p>
+<p>For the following line of code:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    System.out.println(&quot;We will not use &#x27;Hello, World!&#x27;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>The braces mark the beginning and end of a method body</li>
+<li>Every statement must end with a semicolon</li>
+<li>In this statement, System.out is the object calling the println method and inside it is a string parameter</li>
+<li>Follows this: object.method(parameters)</li>
+</ul>
+<hr>
+<h3 id="3-2-Comments"><a href="#3-2-Comments" class="headerlink" title="3.2 Comments"></a>3.2 Comments</h3><p>Comments do not show up in the executable program<br>// for one line comments<br>/*<br>for<br>multiple line<br>*/</p>
+<hr>
+<h3 id="3-3-Data-Types"><a href="#3-3-Data-Types" class="headerlink" title="3.3 Data Types"></a>3.3 Data Types</h3><p>3.3.1 Integer Types</p>
+<ul>
+<li>int</li>
+<li>short</li>
+<li>long</li>
+<li>byte</li>
+</ul>
+<p>3.3.2 Floating-Point Types</p>
+<ul>
+<li>float (6-7 significant decimal digits)</li>
+<li>double (15 significant decimal digits)</li>
+<li>used for numbers with fractional parts</li>
+<li>Double means that it has twice the precision of float type</li>
+<li>Float types have the suffix F or f, so floating types without F or f are considered as the type double</li>
+</ul>
+<p>3.3.3 Char Type</p>
+<ul>
+<li>use ‘xxx’ to display certain characters<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char char1 = &#x27;a&#x27;;</span><br><span class="line"> System.out.println(&quot;char1: &quot;+char1); // This will print a </span><br></pre></td></tr></table></figure></li>
+<li>The same character can be denoted with the matching number<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char char2 = 97;</span><br><span class="line"> System.out.println(&quot;char2: &quot;+char2); // This will also print a </span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>3.3.5 Boolean Type<br>has two values: true or false<br>used for evaluating logical conditions<br>cannot convert between integers and boolean values</p>
+<hr>
+<h3 id="3-4-Variables-and-Constants"><a href="#3-4-Variables-and-Constants" class="headerlink" title="3.4 Variables and Constants"></a>3.4 Variables and Constants</h3><p>3.4.1 Declaring Variables</p>
+<ul>
+<li>Declare variables by placing the type first followed by the name of the variable</li>
+<li>ex: double salary;</li>
+<li>Semicolons are necessary since a declaration is a complete java statement, and all java statements end in a semicolon</li>
+<li>A variable name must begin with a letter</li>
+<li>cannot use a java reserved word as a variable name</li>
+<li>To declare multiple variables in the same line: ex - int i, j; // both are integers</li>
+</ul>
+<p>3.4.2 Initializing Variables</p>
+<ul>
+<li>After declaring a variable, you must initialize it through an assignment statement or it will give an error</li>
+<li>assign a variable by either: <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int vacationDays;</span><br><span class="line">vacationDays = 12;</span><br></pre></td></tr></table></figure>
+or<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int vacationDays = 12; // declares and initializes the variable in the same line</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>3.4.3 Constants</p>
+<ul>
+<li>use the keyword final to denote a constant</li>
+<li><strong>Final</strong> means that you can assign to the variable once, and then its value is set once and for all</li>
+<li>usually the naming convention of constants is all uppercase</li>
+<li><strong>Class Constants</strong> are constants that are available to multiple methods inside a single class</li>
+<li>You can set up a class constant with the key words: static final. </li>
+<li>Code example:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Constants2</span><br><span class="line">&#123;</span><br><span class="line">    public static final double CM_PER_INCH = 2.54; // the class constant</span><br><span class="line">    public static void main(String[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        double paperWidth = 8.5;</span><br><span class="line">        double paperHeight = 11;</span><br><span class="line">        System.out.println(&quot;Paper size in centimeters: &quot;+ paperWidth * CM_PER_INCH + &quot; by &quot; + paperHeight * CM_PER_INCH);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>since the constant is outside the main method, the constant can also be used in other methods of the same class</li>
+</ul>
+<p>3.4.4 Enumerated Types</p>
+<ul>
+<li>Used when variables hold a restricted set of values</li>
+<li>ex: small, medium, and large</li>
+<li>You can define the enumerated type and declare the variables by using:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">enum Size &#123; SMALL, MEDIUM, LARGE, EXTRA_LARGE &#125;;</span><br><span class="line">Size s = Size.MEDIUM;</span><br></pre></td></tr></table></figure></li>
+<li>The variable size can only hold what is inside the braces or the special value null (indicates that  the variable is not<br>set to any value at all)</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Comments</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="https://rxu22.github.io/RichardBlog/2021/06/07/corejava1/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="as_sitesearch" value="rxu22.github.io/RichardBlog">
+  </form>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2021 Richard Xu
+  
+</div>
+<div class="clearfix"></div></footer>
+  
+<script src="/RichardBlog/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/RichardBlog/js/jquery.imagesloaded.min.js"></script>
+
+
+<script src="/RichardBlog/js/gallery.js"></script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/RichardBlog/fancybox/jquery.fancybox.css">
+
+
+<script src="/RichardBlog/fancybox/jquery.fancybox.pack.js"></script>
+
+<script>
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
