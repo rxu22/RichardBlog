@@ -45,6 +45,54 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article id="post-codereview1" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2021-06-13T22:42:54.704Z"><a href="/RichardBlog/2021/06/13/codereview1/">2021-06-13</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/RichardBlog/2021/06/13/codereview1/"></a></h1>
+  
+
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <h1 id="Code-Review-6-10"><a href="#Code-Review-6-10" class="headerlink" title="Code Review 6/10"></a>Code Review 6/10</h1><p>This method prints out asteriks in the shape of a square with a length and width of n</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public static void printSquare(int n) &#123;</span><br><span class="line">       for(int row = 0; row &lt; n; row++)&#123;</span><br><span class="line">           for(int col = 0; col &lt; n; col++)&#123;</span><br><span class="line">               System.out.print(&quot;*&quot;);</span><br><span class="line">           &#125;</span><br><span class="line">           System.out.print(&quot;\n&quot;);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>Since this method is supposed to print out an asterik square, the row and col should iterate the same amount of times.<br>“\n” inserts a new line</p>
+<hr>
+<p>This method prints out a right triangle.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public static void printTriangle(int n) &#123;</span><br><span class="line">        for(int row = 0; row &lt; n; row++)&#123;</span><br><span class="line">            for(int col = 0; col &lt; n - row; col++)&#123;</span><br><span class="line">                System.out.print(&quot;*&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.print(&quot;\n&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>Similar to the last method, the number of rows follow the same procedure. This time, however, the number of columns is equal to n - the number of rows.</p>
+<hr>
+<p>This method prints out a nicer triangle</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public static void printPrettyTriangle(int n) &#123;</span><br><span class="line">       for(int row = 1; row &lt;= n; row++)&#123;</span><br><span class="line">           for(int space = 1; space &lt;= n - row; space++)</span><br><span class="line">               System.out.print(&quot; &quot;);</span><br><span class="line">           for(int col = 0; col &lt; 2 * row - 1; col++)&#123;</span><br><span class="line">               System.out.print(&quot;*&quot;);</span><br><span class="line">           &#125;</span><br><span class="line">           System.out.print(&quot;\n&quot;);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>Changed the rows to match the number n. The columns are odd numbers so the code uses 2 * the current row number - 1. Since the shape of this triangle is different, I added a for loop to add the matching number of spaces.</p>
+<hr>
+<p>This method finds the max number of a given array</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> public static int max(int[] arr) &#123;</span><br><span class="line">        int max = Integer.MIN_VALUE;</span><br><span class="line">        for (int val : arr) &#123;</span><br><span class="line">            if (max &lt; val) &#123;</span><br><span class="line">                max = val;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">//        for(int i = 0; i &lt; arr.length; i++)&#123;</span><br><span class="line">//            if(arr[i] &gt; max)</span><br><span class="line">//                max = arr[i];</span><br><span class="line">//        &#125;</span><br><span class="line">        return max;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>First created an integer value called “max” and set it to 0. Created a for loop to read the entire array, and if the given index of the array is greater than the max value, the max value changes to the given index.</p>
+<p>The other for loops works for negative values since the max value is set equal to Integer.MIN_VALUE which is the smallest number even with negatives considered.</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article id="post-corejava3" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   
   <div class="post-content">
